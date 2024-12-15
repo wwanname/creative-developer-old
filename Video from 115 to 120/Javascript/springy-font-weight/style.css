@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Inter Variable';
+  src: url(inter.ttf);
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url(martian-mono.ttf);
+}
+
+@keyframes slidein {
+  0% {
+    clip-path: polygon(0 100%, 100% 110%, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 -10%, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter Variable', Arial, Helvetica, sans-serif;
+  font-variation-settings: 'wght' 300;
+
+  font-size: calc(16px + 0.5vmin);
+}
+
+body {
+  color: #222222;
+  background-color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+
+  gap: 2rem;
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  font-family: 'Martian Mono', monospace;
+  font-size: 3rem;
+  font-variation-settings: 'wght' 100;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 3rem 0 0 0;
+}
+
+p {
+  margin: 1.5rem 0 1.5rem 0;
+  max-width: 50ch;
+}
+
+div.image {
+  position: sticky;
+  top: 2rem;
+
+  background-color: #fdbf01;
+
+  height: calc(100vh - 4rem);
+}
+
+div.image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+
+  animation: slidein 1.5s 0.5s both;
+}
+
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  div.image {
+    position: static;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}

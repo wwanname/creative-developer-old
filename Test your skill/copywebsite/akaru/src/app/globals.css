@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Alliance";
+  src: url(/font/AllianceNo1-Medium.woff2);
+}
+
+::selection {
+  color: #0e0e0e;
+  background: #ee9f20;
+}
+
+body {
+  background-color: #fec76f;
+  margin: 0;
+  transition: all;
+  animation-duration: 2s;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

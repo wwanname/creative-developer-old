@@ -1,0 +1,108 @@
+@import "../components/Layout/Stairs/style.scss";
+@import "../components/Layout/Inner/style.scss";
+@import "../components/Layout/Curve/style.scss";
+
+.main {
+  .header {
+    display: flex;
+    gap: 15px;
+    padding: 40px;
+    height: 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .page {
+    padding: 40px;
+    min-height: calc(100vh - 80px);
+  }
+  h1 {
+    margin-top: 50px;
+    padding: 40px;
+  }
+  .body {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+//slider
+.inner {
+  background-color: black;
+  .page {
+    background-color: white;
+  }
+  .slide {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 1;
+  }
+}
+
+//stairs
+.stairs {
+  .transitionContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 2;
+    div {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+    }
+  }
+  .transitionBackground {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+  }
+}
+
+//curve
+.curve {
+  svg,
+  .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+  }
+  .background {
+    background-color: black;
+    transition: opacity 0s linear 0.1s;
+  }
+  .route {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    font-size: 46px;
+    z-index: 3;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}

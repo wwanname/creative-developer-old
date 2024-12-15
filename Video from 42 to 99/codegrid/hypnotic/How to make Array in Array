@@ -1,0 +1,10 @@
+  const newItems = rows.map((row) =>
+    Array.from({ length: row.count }, (_, index) => {
+      const itemId = `${row.id}-${index}`;
+      return {
+        id: itemId,
+        rowID: row.id,
+        video: videos.find((v) => v.id == itemId)
+      }
+    })
+  )

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'ABC Oracle';
+  src: url(ABCOracle-Regular-Trial.woff2);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-trail: #ffffff;
+}
+
+html {
+  font-size: calc(16px + 0.5vmax);
+  line-height: 1.25;
+}
+
+body {
+  font-family: 'ABC Oracle', Arial, Helvetica, sans-serif;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header,
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem 1rem;
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: min(320px, 50vh);
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+header img {
+  vertical-align: -15%;
+  height: 1em;
+  margin: 0 0.2em 0 0;
+}
+
+header p {
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+header p:first-of-type {
+  grid-column: span 2;
+}
+
+section {
+  background-color: #181818;
+}
+
+section figure {
+  grid-column: span 2;
+}
+
+section figcaption {
+  font-size: max(16px, 0.75rem);
+  margin: 0.25rem 0 0;
+}
+
+section figcaption:before {
+  content: '— ';
+}
+
+section img {
+  max-width: 100%;
+}
+
+svg.trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+}
+
+svg.trail path {
+  fill: none;
+
+  stroke: var(--color-trail);
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

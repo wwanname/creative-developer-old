@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ipad-section {
+  display: grid;
+  height: 200vh;
+  align-items: start;
+}
+
+.svg-container {
+  grid-area: 1/1;
+  z-index: 10;
+  background-color: #fff;
+  mix-blend-mode: lighten;
+}
+
+@keyframes paint-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-container path {
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 0;
+}
+
+.video-container {
+  grid-area: 1/1;
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  grid-area: 1/1;
+  margin-top: 100dvh;
+  z-index: 10;
+  color: #fff;
+  font-weight: 700;
+  font-size: 5vw;
+  text-align: center;
+}
+
+@keyframes fade-in {
+  50% {
+    opacity: 1;
+  }
+}
+
+.text-container > p {
+  margin-bottom: 20vh;
+}
+
+@supports (animation-timeline: view()) {
+  .text-container > p {
+    opacity: 0;
+    animation: fade-in both linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 100%;
+  }
+
+  .svg-container path {
+    stroke-dashoffset: 9300;
+    animation: paint-line linear both;
+    animation-timeline: view();
+    animation-range: entry 30% entry 100%;
+  }
+}

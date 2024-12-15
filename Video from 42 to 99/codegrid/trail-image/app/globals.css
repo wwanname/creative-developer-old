@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: orange;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url(../public/PPNeueMontreal-Variable.ttf);
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  font-size: 40;
+  font-family: "PP Neue Montreal";
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.item {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

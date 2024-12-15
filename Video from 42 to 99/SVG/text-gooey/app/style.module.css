@@ -1,0 +1,24 @@
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .numbers {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.main svg {
+    width: 500px;
+    filter: url('#filter');
+}
+
+.main svg path {
+    display: none;
+}
+
+.main svg circle {
+    fill: black;
+}

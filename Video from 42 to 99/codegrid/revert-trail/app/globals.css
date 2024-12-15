@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Akkurat Mono";
+  src: url(../public/AkkuratMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "PP Editoral Old";
+  src: url(../public/PPEditorialNew-Bold.ttf);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Akkurat Mono";
+  background-color: #121212;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a, p {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  mix-blend-mode: difference;
+}
+
+nav > div {
+  flex: 1;
+}
+
+.logo a {
+  font-family: "PP Editoral Old";
+  font-weight: 400;
+}
+
+.header {
+  position: relative;
+  top: 8em;
+  margin-bottom: 12em;
+  z-index: -10;
+}
+
+.header img {
+  z-index: -10;
+}
+
+.hero-img, .img {
+  width: 100%;
+  height: 800px;
+  padding-bottom: 1em;
+  filter: saturate(0);
+  overflow: hidden;
+}
+
+.copy {
+  position: relative;
+  margin: 1em 0;
+  padding-bottom: 2em;
+}
+
+.copy p {
+  opacity: 0.75;
+  margin-bottom: 2em;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.flash {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #121212;
+  z-index: 10;
+}

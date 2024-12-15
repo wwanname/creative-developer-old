@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Switzer';
+  src: url(Switzer-Variable.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --background-color: #c4ecdd;
+  --post-color: #ffffff;
+  --text-color: #413e3d;
+}
+
+html {
+  font-size: calc(18px + 0.3vmax);
+  font-family: 'Switzer', Arial, Helvetica, sans-serif;
+  font-variation-settings: 'wght' 300;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--post-color);
+
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-variation-settings: 'wght' 600;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+nav a:before {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  vertical-align: -5%;
+  margin: 0 0.3em 0 0;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+figure {
+  background-color: var(--post-color);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+figcaption {
+  font-size: 1.25rem;
+  margin: 2rem 0 0;
+  padding: 1rem 0 0;
+  text-wrap: balance;
+  border-top: 2px solid var(--background-color);
+}
+
+figure img {
+  max-width: 100%;
+  aspect-ratio: 2 / 3;
+  vertical-align: bottom;
+}
+
+figure.squiggle img {
+  clip-path: url(#clip-squiggle);
+}
+
+figure.snowman img {
+  clip-path: url(#clip-snowman);
+}
+
+figure.window img {
+  clip-path: url(#clip-window);
+}

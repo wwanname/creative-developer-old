@@ -1,0 +1,31 @@
+.Description {
+  height: 120dvh;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  .DescriptionContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    p {
+      font-size: 7vw;
+      margin: 0px;
+      cursor: default;
+    }
+  }
+  .vignette {
+    height: 30dvw;
+    width: 25dvw;
+    position: fixed;
+    top: 0;
+    border-radius: 1.5dvw;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

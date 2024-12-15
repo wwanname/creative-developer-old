@@ -1,0 +1,47 @@
+.transitionIn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 20;
+    .row {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      .block {
+        position: relative;
+        flex: 2;
+        background-color: #667067;
+        margin: -0.25px;
+        transform-origin: top;
+      }
+    }
+}
+
+.transitionOut {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  z-index: 20;
+    .row {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      .block {
+        position: relative;
+        flex: 1;
+        background-color: #667067;
+        margin: -0.25px;
+        transform-origin: bottom;
+      }
+    }
+}

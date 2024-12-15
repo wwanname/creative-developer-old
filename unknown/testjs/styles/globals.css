@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: rgb(2, 2, 2);
+  font-family: Helvetica, 'Nunito', 'Playfair Display', sans-serif;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}

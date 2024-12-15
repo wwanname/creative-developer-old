@@ -1,0 +1,163 @@
+/* .el{
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    perspective: 80vw;
+    transform-origin: top;
+}
+
+.el:last-of-type{
+    border-bottom: 1px solid white;
+}
+
+.el a,
+.el p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 8vw;
+    line-height: 8.2vw;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+.outer {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    will-change: top;
+}
+
+.outer .inner {
+  background-color: #d3fd50;
+  position: absolute;
+  white-space: nowrap;
+  height: 100%;
+  top: 100%;
+  display: flex;
+  will-change: top;
+}
+
+.outer .inner .container {
+    display: flex;
+    align-items: center;
+    animation: slider 12s linear infinite;
+    transition: opacity 0.3s;
+    position: relative;
+    opacity: 0
+}
+
+.outer .inner .container:nth-last-of-type(2) {
+    transition-delay: -4s;
+}
+
+.outer .inner .container:nth-last-of-type(3) {
+    transition-delay: -6s;
+}
+
+.outer .container:hover {
+    opacity: 1;
+}
+
+@keyframes slider {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+} */
+
+.link {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    perspective: 80vw;
+    transform-origin: top;
+  }
+  
+  .link:last-of-type {
+    border-bottom: 1px solid white;
+  }
+  
+  .link:hover .outer .container {
+    opacity: 1;
+  }
+  
+  .link a,
+  .link p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 8vw;
+    line-height: 8.2vw;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  .outer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .outer .inner {
+    background-color: #d3fd50;
+    position: absolute;
+    white-space: nowrap;
+    height: 100%;
+    top: 100%;
+    display: flex;
+  }
+  
+  .outer .inner .container {
+    display: flex;
+    align-items: center;
+    animation: slider 12s linear infinite;
+    transition: opacity 0.4s;
+    position: relative;
+    opacity: 0;
+  }
+  
+  .outer .inner .container:nth-of-type(2) {
+    transition-delay: -4s;
+  }
+  
+  .outer .inner .container:nth-of-type(3) {
+    transition-delay: -6s;
+  }
+  
+  .outer .inner .container .imageContainer {
+    height: 6vw;
+    width: 16vw;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    display: flex;
+  }
+  
+  .outer .inner .container .imageContainer img {
+    object-fit: cover;
+  }
+  
+  .outer .inner .container p {
+    color: black;
+  }
+
+  @keyframes slider {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
